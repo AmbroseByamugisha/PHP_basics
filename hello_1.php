@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A quick test</title>
+</head>
+<body>
+	Hello World!
+</body>
+</html>
