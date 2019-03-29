@@ -54,7 +54,7 @@
  {
  	static $count = 0;
  	echo $count;
- 	$count++;
+ 	++$count;
  }
  echo test();
  echo "<br>";
@@ -64,5 +64,49 @@
  print_r($GLOBALS);
  echo "<br>";
  // Expressions
+ $y = 2;
+ $z = 3;
+ $product = $y * $z;
+ echo "the product is $product";
+ echo "<br>";
+ $team = "Golden state";
+
+ if ($team == "Golden state")
+ 	echo "THEY ARE WINNING AGAIN";
+ echo "<br>";
+ // good one
+ 
+ /*
+ switch($page)
+ {
+ 	case "Home":
+ 	echo "You selected home";
+ 	break;
+ 	case "News":
+ 	echo "You selected news";
+ 	break;
+ 	case "about":
+ 	echo "you selected the about page";
+ 	break;
+ }
+*/
+ $count = 1;
+ while($count <= 12)
+ {
+ 	echo "$count times 12 is " . $count * 12 . "<br>";
+ 	++$count;
+ }
+
+ // do while loop
+ $count = 2;
+
+ do {
+ 	echo "$count times 12 is " . $count * 12;
+ 	echo "<br>";
+ } while(++$count <= 12);
+
+ // FOR LOOP
+ for($count = 3; $count <= 12; ++$count)
+ 	echo "$count times 12 is ". $count * 12 . "<br>";
 
 ?>
