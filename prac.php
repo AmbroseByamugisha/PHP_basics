@@ -19,5 +19,24 @@ _END;
 fwrite($fh, $text) or die("couldnt write to file");
 fclose($fh);
 echo "File 'testfile.txt' written successfully";
+echo "<br>";
+// uploading an image
+echo <<<_END
+<html><head><title>PHP FORM UPLOAD</title></head><body>
+<form method='post' action='prac.php' enctype='multipart/form-data'>
+Select File: <input type='file' name='filename' size='10'>
+<input type='submit' value='upload'>
+</form>
+_END;
+
+if ($_FILES)
+{
+	$name = $_FILES['filename']['name'];
+	move_uploaded_file($_FILES['filename']['tmp_name'], $name);
+	echo "Uploaded image '$name'<br><img src='$name'>";
+}
+
+echo "</body></html>";
+
 
 ?>
